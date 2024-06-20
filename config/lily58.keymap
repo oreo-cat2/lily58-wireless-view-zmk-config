@@ -36,8 +36,8 @@
 
             display-name = "Base";
             bindings = <
-&kp GRAVE            &mt LS(N1) NUMBER_1  &mt LS(N2) NUMBER_2  &mt LS(N3) NUMBER_3  &mt LS(N4) NUMBER_4  &mt LS(N5) N5                          &mt LS(N6) NUMBER_6  &mt LS(N7) N7  &mt LS(N8) N8        &mt LS(N9) N9       &mt LS(N0) N0            &mt LS(MINUS) MINUS
-&kp TAB              &mt LS(Q) Q          &mt LS(W) W          &mt LS(F) F          &mt LS(P) P          &mt LS(G) G                            &mt LS(J) J          &mt LS(L) L    &mt LS(U) U          &mt LS(Y) Y         &mt SEMICOLON SEMICOLON  &kp BACKSPACE
+&kp GRAVE            &mt LS(N1) NUMBER_1  &mt LS(N2) NUMBER_2  &mt LS(N3) NUMBER_3  &mt LS(N4) NUMBER_4  &mt LS(N5) N5                          &mt LS(N6) NUMBER_6  &mt LS(N7) N7  &mt LS(N8) N8        &mt LS(N9) N9       &mt LS(N0) N0            &kp LS(BACKSPACE)
+&kp TAB              &mt LS(Q) Q          &mt LS(W) W          &mt LS(F) F          &mt LS(P) P          &mt LS(G) G                            &mt LS(J) J          &mt LS(L) L    &mt LS(U) U          &mt LS(Y) Y         &mt SEMICOLON SEMICOLON  &mt LS(MINUS) MINUS
 &mt LEFT_SHIFT CAPS  &mt LS(A) A          &mt LS(R) R          &mt LS(S) S          &mt LS(T) T          &mt LS(D) D                            &mt LS(H) H          &mt LS(N) N    &mt LS(E) E          &mt LS(I) I         &mt LS(O) O              &mt LS(SQT) SQT
 &kp LCTRL            &mt LS(Z) Z          &mt X X              &mt LS(C) C          &mt LS(V) V          &mt LS(B) B    &tog 1       &tog 2     &mt LS(K) K          &mt LS(M) M    &mt LS(COMMA) COMMA  &mt LS(DOT) PERIOD  &mt LS(FSLH) FSLH        &mt LS(NON_US_BACKSLASH) NON_US_BACKSLASH
                                                                &kp LALT             &kp LGUI             &kp LEFT       &kp ENTER    &kp SPACE  &kp RIGHT            &kp UP_ARROW   &kp DOWN_ARROW
