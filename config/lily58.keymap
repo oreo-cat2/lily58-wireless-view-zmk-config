@@ -14,12 +14,90 @@
 
         Delete {
             bindings = <&kp DELETE>;
-            key-positions = <23 22>;
+            key-positions = <10 11>;
         };
 
         Escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <12 13>;
+            key-positions = <0 1>;
+        };
+
+        wsad {
+            bindings = <&wsp>;
+            key-positions = <52 53>;
+        };
+
+        kbaer {
+            bindings = <&kbaer>;
+            key-positions = <16 17>;
+        };
+
+        ashorg {
+            bindings = <&ashraeorg>;
+            key-positions = <28 29>;
+        };
+
+        adm {
+            bindings = <&admin>;
+            key-positions = <40 41>;
+        };
+    };
+
+    macros {
+        PIN: PIN {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N2 &kp N2 &kp N7 &kp N7 &kp N4 &kp N3>;
+            label = "PIN";
+        };
+
+        wsp: wsp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(B) &kp R &kp A &kp V &kp E &kp S &kp N1 &kp DLLR>;
+            label = "WSP";
+        };
+
+        M2: M2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp H &kp I &kp C &kp A &kp G &kp O &kp I &kp S &kp T &kp O &kp O &kp C &kp O &kp L &kp D>;
+            label = "M2";
+        };
+
+        M3: M3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N4 &kp LS(T) &kp O &kp LS(B) &kp E &kp O &kp R &kp LS(N) &kp O &kp T &kp EXCL>;
+            label = "M3";
+        };
+
+        M4: M4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(H) &kp A &kp P &kp P &kp Y &kp N1 &kp N3 &kp T &kp H &kp LS(J) &kp O &kp L &kp L &kp Y &kp EXCL>;
+            label = "M4";
+        };
+
+        ashraeorg: ashraeorg {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp AT &kp A &kp S &kp H &kp R &kp A &kp E &kp DOT &kp O &kp R &kp G>;
+            label = "ASHRAEORG";
+        };
+
+        admin: admin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp D &kp M &kp I &kp N &kp I &kp S &kp T &kp R &kp A &kp T &kp O &kp R>;
+            label = "ADMIN";
+        };
+
+        kbaer: kbaer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K &kp B &kp A &kp E &kp R>;
+            label = "KBAER";
         };
     };
 
@@ -36,11 +114,11 @@
 
             display-name = "Base";
             bindings = <
-&kp GRAVE            &mt LS(N1) NUMBER_1  &mt LS(N2) NUMBER_2  &mt LS(N3) NUMBER_3  &mt LS(N4) NUMBER_4  &mt LS(N5) N5                          &mt LS(N6) NUMBER_6  &mt LS(N7) N7  &mt LS(N8) N8        &mt LS(N9) N9       &mt LS(N0) N0            &kp LS(BACKSPACE)
-&kp TAB              &mt LS(Q) Q          &mt LS(W) W          &mt LS(F) F          &mt LS(P) P          &mt LS(G) G                            &mt LS(J) J          &mt LS(L) L    &mt LS(U) U          &mt LS(Y) Y         &mt SEMICOLON SEMICOLON  &mt LS(MINUS) MINUS
-&mt LEFT_SHIFT CAPS  &mt LS(A) A          &mt LS(R) R          &mt LS(S) S          &mt LS(T) T          &mt LS(D) D                            &mt LS(H) H          &mt LS(N) N    &mt LS(E) E          &mt LS(I) I         &mt LS(O) O              &mt LS(SQT) SQT
-&kp LCTRL            &mt LS(Z) Z          &mt X X              &mt LS(C) C          &mt LS(V) V          &mt LS(B) B    &tog 1       &tog 2     &mt LS(K) K          &mt LS(M) M    &mt LS(COMMA) COMMA  &mt LS(DOT) PERIOD  &mt LS(FSLH) FSLH        &mt LS(NON_US_BACKSLASH) NON_US_BACKSLASH
-                                                               &kp LALT             &kp LGUI             &kp LEFT       &kp ENTER    &kp SPACE  &kp RIGHT            &kp UP_ARROW   &kp DOWN_ARROW
+&kp GRAVE            &mt LS(N1) NUMBER_1  &mt LS(N2) NUMBER_2  &mt LS(N3) NUMBER_3  &mt LS(N4) NUMBER_4  &mt LS(N5) N5                         &mt LS(N6) NUMBER_6  &mt LS(N7) N7  &mt LS(N8) N8        &mt LS(N9) N9       &mt LS(N0) N0            &kp LS(BACKSPACE)
+&kp TAB              &mt LS(Q) Q          &mt LS(W) W          &mt LS(F) F          &mt LS(P) P          &mt LS(G) G                           &mt LS(J) J          &mt LS(L) L    &mt LS(U) U          &mt LS(Y) Y         &mt SEMICOLON SEMICOLON  &mt LS(MINUS) MINUS
+&mt LEFT_SHIFT CAPS  &mt LS(A) A          &mt LS(R) R          &mt LS(S) S          &mt LS(T) T          &mt LS(D) D                           &mt LS(H) H          &mt LS(N) N    &mt LS(E) E          &mt LS(I) I         &mt LS(O) O              &mt LS(SQT) SQT
+&kp LCTRL            &mt LS(Z) Z          &mt X X              &mt LS(C) C          &mt LS(V) V          &mt LS(B) B    &kp LEFT    &kp RIGHT  &mt LS(K) K          &mt LS(M) M    &mt LS(COMMA) COMMA  &mt LS(DOT) PERIOD  &mt LS(FSLH) FSLH        &mt LS(NON_US_BACKSLASH) NON_US_BACKSLASH
+                                                               &kp UP_ARROW         &kp LGUI             &kp ENTER      &PIN        &tog 2     &kp SPACE            &kp RIGHT_ALT  &kp DOWN_ARROW
             >;
         };
 
@@ -54,11 +132,11 @@
 
             display-name = "Lower";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &trans           &trans    &trans    &trans
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9           &kp F10   &kp F11   &kp F12
-&kp GRAVE   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                       &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
-&trans      &trans        &trans        &trans        &trans        &trans        &tog 0    &tog 2  &trans     &kp MINUS  &kp KP_PLUS      &kp LBRC  &kp RBRC  &kp PIPE
-                                        &trans        &trans        &trans        &trans    &trans  &trans     &trans     &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans           &trans           &trans           &trans           &trans        &trans
+&trans      &none         &none         &none         &none         &none                           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS        &kp FSLH      &trans
+&trans      &none         &none         &none         &none         &none                           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS         &kp ASTERISK  &trans
+&trans      &none         &none         &none         &none         &none         &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &none         &trans
+                                        &trans        &trans        &trans        &tog 0    &tog 2  &trans           &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -74,11 +152,11 @@
 
             display-name = "Raise";
             bindings = <
-&trans     &trans  &trans  &trans   &trans   &trans                     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS     &trans            &trans
-&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE    &trans            &trans
-&kp F1     &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MULTIPLY  &kp KP_EQUAL      &trans
-&kp F7     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &tog 0    &tog 1  &kp KP_PLUS      &kp KP_NUMBER_0  &kp COMMA        &kp PERIOD       &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-                           &trans   &trans   &trans   &trans    &trans  &trans           &trans           &trans
+&kp F11  &kp F1        &kp F2        &kp F3             &kp F4           &kp F5                        &kp F6           &kp F7           &kp F8     &kp F9            &kp F10            &kp F12
+&trans   &kp GRAVE     &trans        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE                    &kp KP_NUMBER_4  &kp MINUS        &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&trans   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3       &kp NUMBER_4     &kp N5                        &kp NUMBER_6     &kp NUMBER_7     &kp N8     &kp N9            &kp N0             &kp DELETE
+&trans   &kp LEFT      &kp UP_ARROW  &kp DOWN_ARROW     &kp RIGHT        &kp F12     &trans    &trans  &kp KP_PLUS      &kp KP_NUMBER_0  &trans     &trans            &trans             &kp INSERT
+                                     &trans             &trans           &trans      &tog 0    &tog 1  &trans           &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
