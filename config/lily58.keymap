@@ -41,6 +41,11 @@
             bindings = <&admin>;
             key-positions = <40 41>;
         };
+
+        m2 {
+            bindings = <&M2>;
+            key-positions = <44 45>;
+        };
     };
 
     macros {
@@ -118,7 +123,7 @@
 &kp TAB              &mt LS(Q) Q          &mt LS(W) W          &mt LS(F) F          &mt LS(P) P          &mt LS(G) G                           &mt LS(J) J          &mt LS(L) L    &mt LS(U) U          &mt LS(Y) Y         &mt SEMICOLON SEMICOLON  &mt LS(MINUS) MINUS
 &mt LEFT_SHIFT CAPS  &mt LS(A) A          &mt LS(R) R          &mt LS(S) S          &mt LS(T) T          &mt LS(D) D                           &mt LS(H) H          &mt LS(N) N    &mt LS(E) E          &mt LS(I) I         &mt LS(O) O              &mt LS(SQT) SQT
 &kp LCTRL            &mt LS(Z) Z          &mt X X              &mt LS(C) C          &mt LS(V) V          &mt LS(B) B    &kp LEFT    &kp RIGHT  &mt LS(K) K          &mt LS(M) M    &mt LS(COMMA) COMMA  &mt LS(DOT) PERIOD  &mt LS(FSLH) FSLH        &mt LS(NON_US_BACKSLASH) NON_US_BACKSLASH
-                                                               &kp UP_ARROW         &kp LGUI             &kp ENTER      &PIN        &tog 2     &kp SPACE            &kp RIGHT_ALT  &kp DOWN_ARROW
+                                                               &kp UP_ARROW         &kp LGUI             &kp ENTER      &PIN        &to 1      &kp SPACE            &kp RIGHT_ALT  &kp DOWN_ARROW
             >;
         };
 
@@ -136,10 +141,8 @@
 &trans      &none         &none         &none         &none         &none                           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS        &kp FSLH      &trans
 &trans      &none         &none         &none         &none         &none                           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS         &kp ASTERISK  &trans
 &trans      &none         &none         &none         &none         &none         &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &none         &trans
-                                        &trans        &trans        &trans        &tog 0    &tog 2  &trans           &trans           &trans
+                                        &trans        &trans        &trans        &to 0     &to 2   &trans           &trans           &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         raise_layer {
@@ -156,10 +159,8 @@
 &trans   &kp GRAVE     &trans        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE                    &kp KP_NUMBER_4  &kp MINUS        &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
 &trans   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3       &kp NUMBER_4     &kp N5                        &kp NUMBER_6     &kp NUMBER_7     &kp N8     &kp N9            &kp N0             &kp DELETE
 &trans   &kp LEFT      &kp UP_ARROW  &kp DOWN_ARROW     &kp RIGHT        &kp F12     &trans    &trans  &kp KP_PLUS      &kp KP_NUMBER_0  &trans     &trans            &trans             &kp INSERT
-                                     &trans             &trans           &trans      &tog 0    &tog 1  &trans           &trans           &trans
+                                     &trans             &trans           &trans      &to 0     &to 1   &trans           &trans           &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
