@@ -138,7 +138,7 @@
             display-name = "Lower";
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans           &trans           &trans           &trans           &trans        &trans
-&trans      &none         &none         &none         &none         &none                           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS        &kp FSLH      &trans
+&kp LC(S)   &none         &none         &none         &none         &none                           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS        &kp FSLH      &trans
 &trans      &none         &none         &none         &none         &none                           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS         &kp ASTERISK  &trans
 &trans      &none         &none         &none         &none         &none         &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &none         &trans
                                         &trans        &trans        &trans        &to 0     &to 2   &trans           &trans           &trans
